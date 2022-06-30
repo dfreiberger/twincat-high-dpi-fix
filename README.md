@@ -5,6 +5,9 @@ Fixes for TwinCAT display issues
 
 Before 3.1.4026.x the TwinCAT XAE and related tools such as route manager do not display correctly on 4K monitors. Unfortunately many monitors since 2018 are 4K. Thankfully there is a simple fix.
 
+### Side effects
+After following the below instructions to disable DPI awareness, dialogs that are part of TwinCAT or the Remote Manager may appear slightly lower resolution or blurry, however the components will be sized correctly and readable, which is not always true without applying this fix.
+
 ## Identifying the problem
 
 After installing XAE Shell or TwinCAT 3 integrated into Visual Studio, you may see that many tables are compressed and various dialogs and other artifacts are rendered incorrectly.
@@ -16,7 +19,7 @@ Before fix (with DPI awareness enabled) | After fix (with DPI awareness disabled
 <img src="./images/drive-manager-before.png" width="500"/>|<img src="./images/drive-manager-after.png" width="500"/>
 <img src="./images/add-routes-before.png" width="500"/>|<img src="./images/add-routes-after.png" width="500"/>
 
-After digging into this a bit, I finally determined that this is due to TwinCAT using CoDeSys underneath, and CoDeSys using old WinForms dialogs for everything.
+After digging into this a bit, I finally determined that this is due to TwinCAT using Codesys underneath, and Codesys using old WinForms components for everything.
 
 <img src="./images/twincat-dependencies.png" width="300"/>
 
