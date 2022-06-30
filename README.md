@@ -62,9 +62,9 @@ Windows Registry Editor Version 5.00
 "dpiAwareness"=dword:00000001
 ```
 
-## Fixing Route Manager
+## Fixing Remote Manager
 
-Similarly, to fix the Route Manager dialog, run the [disable-dpi-awareness-TcAmsRemoteMgr.reg](disable-dpi-awareness-TcAmsRemoteMgr.reg) script (repeated below), or manually edit this key in the Windows registry.
+Similarly, to fix the Remote Manager dialog, run the [disable-dpi-awareness-TcAmsRemoteMgr.reg](disable-dpi-awareness-TcAmsRemoteMgr.reg) script (repeated below), or manually edit this key in the Windows registry.
 
 ```
 Windows Registry Editor Version 5.00
